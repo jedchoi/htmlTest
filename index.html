@@ -1,32 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <style type="text/css">
-            body {
-                padding-top: 40px;
-            }
-        </style>
-        <title>Jed WKWebView</title>
         <meta charset="UTF-8">
-    </head>
-    <body style="background-color: yellow;">
-        <h1>WKWebView Test</h1>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TVPlugin Test</title>
+            </head>
+    <body id="body" style="background-color: yellow;">
+        <h1>Web TVPlugin Test</h1>
 
-        <form class="form-signin" role="form">
-                <div class="form-content">
+        <button class="btn btn-lg btn-primary btn-block" type="button" onClick="testLaunchTVPlugin()">
+            Test - Launch Native TVPlugin
+        </button>
 
-                    <label for="email" class="form-email">Already an account?</label>
-                    <br />
-                    <input type="email" id="email" class="form-control" placeholder="Email" required autofocus />
-                    <br />
-                    <input type="password" id="password" class="form-control" placeholder="Password" required>
-                    <br />
-
-                    <button class="btn btn-lg btn-primary btn-block" type="button" onClick="sendLoginAction()">
-                        Submit
-                    </button>
-                </div>
-        </form>
+        <button class="btn btn-lg btn-primary btn-block" type="button" onClick="testUseAutoCropLib()">
+            Test - AutoCrop Framework
+        </button>
         <script type="text/javascript" src="main.js"></script>
     </body>
 </html>
