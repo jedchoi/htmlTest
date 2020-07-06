@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" content="text/html" http-equiv="content-type">
+    <title>Jed Home</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+      </script>
+
+    <script type="text/JavaScript" charset="utf-8">
+      function callNative() {
+        try {
+          window.webkit.messegeHandlers.callbackHandler.postMessage("MessegeBody");
+        } catch(err) {
+          alert(err);
+        }
+      }
+      function redHeader() {
+        alert('redHeader() Call');
+        document.querySelector('h1').style.color = "red";
+      }
+    </script>
+  </head>
+  <body>
+    <strong>oh! </strong><u>my </u>hello <b>web</b>
+    <p><img src="asset_before.PNG" width="55%" alt=""></p>
+    <h1>오일오잉</h1>
+    HTML
+    CSS
+    JavaScript
+    <br>
+    <input type="button" name="Call Native" value="Call Native function" onclick="callNative()">
+  </body>
+</html>
