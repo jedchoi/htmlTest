@@ -1,34 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" content="text/html" http-equiv="content-type">
-    <title>Jed Home</title>
+<html>
+    <head>
+        <style type="text/css">
+            body {
+                padding-top: 40px;
+            }
+        </style>
+        <title>Jed WKWebView</title>
+        <meta charset="UTF-8">
+    </head>
+    <body style="background-color: yellow;">
+        <h1>WKWebView Test</h1>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-      </script>
+        <form class="form-signin" role="form">
+                <div class="form-content">
 
-    <script type="text/JavaScript" charset="utf-8">
-      function callNative() {
-        try {
-          window.webkit.messegeHandlers.callbackHandler.postMessage("MessegeBody");
-        } catch(err) {
-          alert(err);
-        }
-      }
-      function redHeader() {
-        alert('redHeader() Call');
-        document.querySelector('h1').style.color = "red";
-      }
-    </script>
-  </head>
-  <body>
-    <strong>oh! </strong><u>my </u>hello <b>web</b>
-    <p><img src="asset_before.PNG" width="55%" alt=""></p>
-    <h1>오일오잉</h1>
-    HTML
-    CSS
-    JavaScript
-    <br>
-    <input type="button" name="Call Native" value="Call Native function" onclick="callNative()">
-  </body>
+                    <label for="email" class="form-email">Already an account?</label>
+                    <br />
+                    <input type="email" id="email" class="form-control" placeholder="Email" required autofocus />
+                    <br />
+                    <input type="password" id="password" class="form-control" placeholder="Password" required>
+                    <br />
+
+                    <button class="btn btn-lg btn-primary btn-block" type="button" onClick="sendLoginAction()">
+                        Submit
+                    </button>
+                </div>
+        </form>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
 </html>
