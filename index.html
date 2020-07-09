@@ -4,17 +4,60 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>TVPlugin Test</title>
-            </head>
-    <body id="body" style="background-color: yellow;">
+        <style type="text/css">
+          body {
+            margin: 0;
+          }
+          img {
+            max-width: 100%;
+          }
+          .box {
+            max-width: 100%;
+            position: relative;
+          }
+          .imgsrc_container {
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+          .photo_button {
+            position: absolute;
+            top: 1130px;
+            left: 150px;
+          }
+
+        </style>
+        <script>
+        function imgToggle() {
+          var imgsrc = document.getElementById("imgsrc");
+          var count = 1;
+          if (count%2 == 1) {
+            imgsrc.src = "./screen_photo.png";
+          } else {
+            imgsrc.src = "./photo_editor.png";
+          }
+        }
+        </script>
+    </head>
+    <body id="body" style="background-color: lightgray;">
+      <div class="box">
+        <div class="imgsrc_container">
+          <img src="./screen_photo.png" onclick="testUseAutoCropLib" id="imgsrc">
+        </div>
+        <div class="photo_button">
+          <div class="center"><img width="550px" height="100px" onclick="testUseAutoCropLib"></div>
+        </div>
+      </div>
+      <!-- <area shape="rect" coords=",50%,70%,70%" onclick="testUseAutoCropLib"> -->
         <h1>Web TVPlugin Test</h1>
 
         <button class="btn btn-lg btn-primary btn-block" type="button" onClick="testLaunchTVPlugin()">
             Test - Launch Native TVPlugin
         </button>
-
-        <button class="btn btn-lg btn-primary btn-block" type="button" onClick="testUseAutoCropLib()">
-            Test - AutoCrop Framework
+        <button class="btn btn-lg btn-primary btn-block" type="button" width=500px onClick="testUseAutoCropLib()">
+          Test - AutoCrop Framework
         </button>
+
         <script type="text/javascript" src="main.js"></script>
     </body>
 </html>
