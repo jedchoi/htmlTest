@@ -31,21 +31,22 @@
           }
         </style>
         <script>
+        var count = 1;
         function imgToggle() {
           var imgsrc = document.getElementById("imgsrc");
-          var count = 1;
           if (count%2 == 1) {
             imgsrc.src = "https://raw.githubusercontent.com/jedchoi/htmlTest/master/screen_photo.PNG";
           } else {
-            imgsrc.src = ".https://raw.githubusercontent.com/jedchoi/htmlTest/master/photo_editor.PNG";
+            imgsrc.src = "https://raw.githubusercontent.com/jedchoi/htmlTest/master/photo_editor.PNG";
           }
+          count=count+1;
         }
         </script>
     </head>
     <body id="body" style="background-color: lightgray;">
       <div class="box">
         <div class="imgsrc_container">
-          <img src="https://raw.githubusercontent.com/jedchoi/htmlTest/master/screen_photo.PNG" onclick="testUseAutoCropLib" id="imgsrc"/>
+          <img src="https://raw.githubusercontent.com/jedchoi/htmlTest/master/screen_photo.PNG" id="imgsrc"/>
         </div>
         <div class="photo_button">
           <div class="center"><button type="button" onclick="testUseAutoCropLib()"><img src="https://raw.githubusercontent.com/jedchoi/htmlTest/master/buttonimage.png" width="250px" height="50px"/></button></div>
@@ -59,7 +60,9 @@
         </button>
         <button class="btn btn-lg btn-primary btn-block" type="button" width=500px onClick="testUseAutoCropLib()">
           Test - AutoCrop Framework
+          <!-- <img src="https://raw.githubusercontent.com/jedchoi/htmlTest/master/buttonimage.png" width="250px" height="50px"/> -->
         </button>
+        <!-- <img src="./aa.jpg" id="imgsrc"> -->
 
         <script type="text/javascript" src="main.js"></script>
     </body>
